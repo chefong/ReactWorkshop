@@ -3,6 +3,8 @@
 This repository/workshop will help you get started with the basics of React.
 
 ## Getting Started
+First things first, **clone** this repository and navigate into the directory of where this application is located.
+
 Make sure you have Node.js installed. If you don't have it installed yet, click [here](https://nodejs.org/en/download/) and follow the instructions to install it. You can check if it's installed properly by doing the following in your terminal.
 ```
 node -v
