@@ -3,17 +3,33 @@ import './App.css';
 
 import Title from './components/Title';
 import Counter from './components/Counter';
+import Reset from './components/Reset';
 
 class App extends Component {
   state = {
-    // We need some state variable to
-    // keep track of our current value
+    num: 0
+  }
+
+  incrementNum = () => {
+    const currentNum = this.state.num;
+    this.setState({ num: currentNum + 1 });
+  }
+
+  decrementNum = () => {
+    const currentNum = this.state.num;
+    this.setState({ num: currentNum - 1 });
+  }
+
+  resetNum = () => {
+    this.setState({ num: 0 });
   }
 
   render() {
     return (
       <div className="App">
-        {/* Components will go here */}
+        <Title num={this.state.num} />
+        <Counter incrementNum={this.incrementNum} decrementNum={this.decrementNum} />
+        <Reset resetNum={this.resetNum} />
       </div>
     );
   }
